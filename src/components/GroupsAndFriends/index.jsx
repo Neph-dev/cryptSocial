@@ -10,7 +10,8 @@ const GroupsAndFriends = () => {
 
     const navigate = useNavigate()
 
-    const onGoToPublicProfile = () => {
+    const onGoToPublicProfile = (item) => {
+        localStorage.setItem('visiting', item.username)
         navigate('/public-profile')
     }
 
@@ -30,7 +31,11 @@ const GroupsAndFriends = () => {
 
             {
                 publicProfile.map((item, index) => (
-                    <div key={index} onClick={onGoToPublicProfile} className='groupsAndFriends-content'>
+                    <div
+                        key={index}
+                        onMouseEnter={() => localStorage.setItem('visiting', item.username)}
+                        onClick={() => onGoToPublicProfile(item)}
+                        className='groupsAndFriends-content'>
                         <img
                             src={item.profilePicture}
                             alt='' className='groupsAndFriends-content-img' />

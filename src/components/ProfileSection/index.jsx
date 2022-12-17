@@ -7,7 +7,7 @@ import PublicProfileSection from '../PublicProfileSection'
 
 const ProfileSection = ({ ...props }) => {
 
-    const { page, profile } = props
+    const { page, profile, activeTab } = props
 
     return (
         <div id='profileSection'>
@@ -55,7 +55,7 @@ const ProfileSection = ({ ...props }) => {
             <div id='separatorHalfrem' />
 
             {page === 'PersonalProfile' && <GroupsAndFriends />}
-            {page === 'PublicProfile' && <PublicProfileSection />}
+            {page === 'PublicProfile' && <PublicProfileSection activeTab={activeTab} />}
 
         </div>
     )

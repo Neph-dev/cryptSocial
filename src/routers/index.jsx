@@ -18,6 +18,7 @@ import {
     PersonalInformation,
     Post,
     PublicProfile,
+    Chat
 } from '../pages'
 
 
@@ -34,6 +35,7 @@ function Routers() {
                 <Route exact path='/home' element={<Home />} />
                 <Route exact path='/post' element={<Post />} />
                 <Route exact path='/public-profile' element={<PublicProfile />} />
+                <Route exact path='/chat' element={<Chat />} />
             </Routes>
         </BrowserRouter>
     )

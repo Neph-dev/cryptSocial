@@ -9,7 +9,7 @@ import Feeds from '../../components/Feeds'
 import PriceFeed from '../../components/PriceFeed'
 
 
-function Home() {
+const Home = () => {
 
     const page = 'PersonalProfile'
 

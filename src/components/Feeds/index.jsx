@@ -9,7 +9,7 @@ import ProfileBioSection from '../ProfileBioSection'
 
 const Feeds = ({ ...props }) => {
 
-    const { page } = props
+    const { page, profile } = props
 
     return (
         <div id='feeds'>
@@ -18,14 +18,14 @@ const Feeds = ({ ...props }) => {
                     <PostCard />
                 }
 
-                {page === 'PublicProfile' &&
-                    <ProfileBioSection />
+                {(page === 'PublicProfile' && profile !== null) &&
+                    <ProfileBioSection profile={profile} />
                 }
 
                 <div id='separator1rem' />
                 <div id='separator1rem' />
 
-                <FeedContent page={page} />
+                <FeedContent page={page} profile={profile} />
 
                 <div id='separator1rem' />
                 <div id='separator1rem' />

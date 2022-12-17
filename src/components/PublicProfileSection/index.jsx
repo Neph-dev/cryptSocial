@@ -1,16 +1,30 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import '../../styles/publicProfileStyles.css'
 import { BsShieldLockFill } from 'react-icons/bs'
 
 
-const PublicProfileSection = () => {
+const PublicProfileSection = ({ ...props }) => {
+
+    const { activeTab } = props
+
+    const navigate = useNavigate()
+
+    const onGoToChat = () => {
+        navigate('/chat')
+    }
+
     return (
         <div id='publicProfileSection'>
             <div id='separator1rem' />
 
             <div>
-                <button className='publicProfileSection-action-button'>
+                <button
+                    disabled={activeTab === 'chat' ? true : false}
+                    onClick={onGoToChat}
+                    style={{ backgroundColor: activeTab === 'chat' ? '#667575' : '#3D5B59' }}
+                    className='publicProfileSection-action-button'>
                     <BsShieldLockFill style={{ marginRight: 10 }} color='#fff' />
                     <span>Message</span>
                 </button>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { GrBitcoin } from 'react-icons/gr'
@@ -12,6 +12,11 @@ import LoginForm from '../../components/LoginForm'
 
 
 const Login = () => {
+
+    useEffect(() => {
+        localStorage.clear()
+    }, [])
+
     return (
         <div id='login'>
 

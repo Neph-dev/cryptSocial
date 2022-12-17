@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import '../../styles/feedsStyles.css'
-import { profile } from '../../Mocks/profile'
+import { publicProfile } from '../../Mocks/publicProfile'
+import { posts } from '../../Mocks/posts'
 import { BsHeartFill, BsHeart } from 'react-icons/bs'
 import { FaHeartBroken } from 'react-icons/fa'
 import { RiSendPlaneFill } from 'react-icons/ri'
@@ -13,6 +14,9 @@ import Comment from '../../components/Comment'
 
 const PostContent = () => {
 
+    const postId = localStorage.getItem('postId')
+    const postUser = localStorage.getItem('postUser')
+
     const [liked, setLiked] = useState(false)
 
     const navigate = useNavigate()
@@ -22,6 +26,24 @@ const PostContent = () => {
     }
 
     const handleBack = () => navigate(-1)
+
+    const findUserPosts = (id) => posts.filter((item) => {
+        if (item.id.includes(id)) {
+            return item
+        }
+        return 0
+    })
+
+    const findUserAvatar = (postUser) => publicProfile.filter((item) => {
+        if (item.username.includes(postUser)) {
+            return item
+        }
+        return 0
+    })
+
+    useEffect(() => {
+        if (postId === null || postUser === null) navigate('/home')
+    }, [postId, postUser, navigate])
 
     return (
         <div id='feeds'>
@@ -40,15 +62,18 @@ const PostContent = () => {
                     <div className='FeedContent'>
                         <div className='post-container'>
                             <div className='post'>
-                                Two assure edward whence the was. Who worthy yet ten boy denote wonder.
+                                {findUserPosts(postId)[0].post}
                             </div>
                             <div className='bottom-post'>
                                 <div> Says </div>
 
                                 <div className='flex-content' style={{ alignItems: 'center', justifyContent: 'space-between' }}>
                                     <div style={{ alignItems: 'center', display: 'flex' }}>
-                                        <img src={profile.profilePicture} alt='' className='post-image-author' />
-                                        <div className='post-name-author'>{profile.username},</div>
+                                        <img
+                                            alt=''
+                                            src={findUserAvatar(postUser)[0].profilePicture}
+                                            className='post-image-author' />
+                                        <div className='post-name-author'>{findUserPosts(postId)[0].author},</div>
                                         <div className='post-ts'>1h ago</div>
                                     </div>
 
