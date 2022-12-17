@@ -1,0 +1,22 @@
+#publicProfile {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.publicProfileSection-action-button {
+    align-items: center;
+    border: 0;
+    background: #3D5B59;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.publicProfileSection-action-button:hover {
+    background-color: #506968;
+    cursor: pointer;
+}

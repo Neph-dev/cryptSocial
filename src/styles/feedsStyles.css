@@ -1,0 +1,136 @@
+#feeds {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    margin-left: 255px;
+    min-height: 90vh;
+    /* overflow-y: scroll; */
+    width: 60%;
+    z-index: 1;
+}
+
+#postCard {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.postCard {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 75%;
+    margin-top: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 2;
+}
+
+#BsCloudHaze2Fill {
+    color: #3D5B59;
+    margin: 1rem 0 0 10px;
+}
+
+#BsCloudHaze2Fill:hover {
+    color: #506968;
+    margin: 1rem 0 0 10px;
+}
+
+#FeedContent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.FeedContent {
+    width: 95%;
+}
+
+.post-container {
+    border-bottom: 1px solid #3D5B59;
+    padding: 10px 0px 0px 10px;
+    width: 100%;
+}
+
+.post {
+    color: #000;
+    font-size: 14px;
+    padding: 10px 0px 5px 10px;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.bottom-post {
+    color: #ccc;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.post-image-author {
+    background: #ccc;
+    border-radius: 20px;
+    height: 35px;
+    width: 35px;
+}
+
+.post-name-author {
+    color: #3D5B59;
+    margin-left: 10px;
+}
+
+.post-ts {
+    color: #ccc;
+    margin-left: 10px;
+}
+
+.bottom-post-icons {
+    margin-right: 10px;
+}
+
+.bottom-post-icons:hover {
+    cursor: pointer;
+}
+
+.post-input-comment {
+    border: .5px solid #3D5B59;
+    border-radius: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 5px;
+    min-height: 50px;
+    max-height: 100px;
+    resize: none;
+    width: 95%;
+}
+
+#comments {
+    background: #fafafa;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+#MdKeyboardBackspace {
+    color: #3D5B59;
+    cursor: pointer;
+    margin-left: 10px;
+}

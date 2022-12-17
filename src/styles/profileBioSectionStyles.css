@@ -1,0 +1,30 @@
+#profileBioSection {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.profileBioSection {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: 'Chivo Mono', monospace;
+    font-size: 13px;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    z-index: 2;
+}
+
+.profileBioSection-name-author {
+    color: #3D5B59;
+    font-family: 'Chivo Mono', monospace;
+    font-size: 14px;
+}

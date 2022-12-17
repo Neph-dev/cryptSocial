@@ -1,0 +1,8 @@
+export { default as Home } from './Home'
+export { default as Post } from './Post'
+export { default as PublicProfile } from './PublicProfile'
+export { default as Login } from './Login'
+export { default as PasswordRecovery } from './PasswordRecovery'
+export { default as NewPassword } from './NewPassword'
+export { default as SignUp } from './SignUp/SignUp'
+export { default as PersonalInformation } from './SignUp/PersonalInformation'

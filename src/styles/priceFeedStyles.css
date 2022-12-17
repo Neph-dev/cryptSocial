@@ -1,0 +1,44 @@
+#priceFeed {
+    width: 24vh;
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.priceFeed-content {
+    align-items: center;
+    border-bottom: 1px solid #3D5B59;
+    color: #3D5B59;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 12px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.priceFeed-content:hover {
+    cursor: pointer;
+    background: #3D5B59;
+    color: #fff;
+}
+
+.priceFeed-content-name {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.priceFeed-content-price {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.priceFeed-content-img {
+    border-radius: 70px;
+    margin-left: 5px;
+}

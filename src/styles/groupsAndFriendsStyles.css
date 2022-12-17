@@ -1,0 +1,54 @@
+#groupsAndFriends {
+    align-items: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.groupsAndFriends-search-container {
+    padding: 10px 10px 0 10px;
+    width: 100%;
+}
+
+#groupsAndFriends-search {
+    border: 0.5px solid #3D5B59;
+    border-radius: 10px;
+    font-size: 12px;
+    outline: none;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+}
+
+.groupsAndFriends-content {
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid #3D5B59;
+    justify-content: flex-start;
+    font-size: 12px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+.groupsAndFriends-content:hover {
+    cursor: pointer;
+    background: #3D5B59;
+    color: #fff;
+}
+
+.groupsAndFriends-content-name {
+    margin-left: 5px;
+}
+
+#groupsAndFriends-GoPrimitiveDot {
+    margin-left: 5px;
+}
+
+.groupsAndFriends-content-img {
+    border-radius: 70px;
+    margin-left: 20px;
+    height: 40px;
+    width: 40px;
+}

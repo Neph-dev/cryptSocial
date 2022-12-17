@@ -1,0 +1,37 @@
+#InfiniteSlide {
+    background-color: #fff;
+    bottom: 0;
+    color: #000;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+
+.InfiniteSlide-container {
+    position: relative;
+    display: flex;
+    width: auto;
+    animation: linearAnimation 20s linear infinite;
+}
+
+@keyframes linearAnimation {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.InfiniteSlide-content {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+    float: left;
+    width: 50%;
+}
+
+
+@media only screen and (max-width: 900px) {}
